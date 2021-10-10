@@ -46,7 +46,7 @@ img {
   flex-direction: column;
 }
 
-.item one, .item two, .item three {
+.item {
   flex: 1;
   padding: 10px;
   margin: 10px;
