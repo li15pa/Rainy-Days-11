@@ -13,16 +13,22 @@ nav a {
 
 h1 {
   font-size: 30px;
+  background-color: #d6c4bf;
 }
 
 h2 {
   font-size: 20px;
 }
 
+footer {
+  background-color: #d6c4bf;
+  color: #0a3641;
+}
+
 footer::before,
 footer::after {
   content: "//";
-  color: #d6c4bf;
+  color: #0a3641;
   font-size: 30px;
   font-weight: bold;
 }
@@ -35,10 +41,21 @@ img {
   max-width: 200px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item one, .item two, .item three {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+}
+
 nav a {
   text-decoration: none;
   padding: 10px;
-  color: #0a3641
+  color: #0a3641;
 }
 
 nav li {
@@ -53,12 +70,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
-nav, #hamburger-menu {
+nav,
+#hamburger-menu {
   display: none;
 }
 
 #hamburger-menu:checked ~ nav {
-  display: block
+  display: block;
 }
 
 .hamburger-label {
@@ -69,24 +87,24 @@ nav, #hamburger-menu {
   display: block;
 }
 
-.current{
+.current {
   font-weight: bold;
 }
 
-@media (min-width: 600px){
-  .logo{
-    
-  }
-
-  nav{
+@media only screen and (min-width: 600px) {
+  nav {
     display: inline-block;
   }
 
-  .hamburger-label{
+  .hamburger-label {
     display: none;
   }
 
   nav a {
-    padding: 19% 40px;
+    padding: 20% 40px;
+  }
+
+  .container {
+    flex-direction: row;
   }
 }
